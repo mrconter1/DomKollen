@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import { CourtCaseCard } from '@/components/CourtCaseCard';
 import courtCasesData from '@/data/court_cases.json';
 import { CourtCase } from '@/types/CourtCase';
-import { Slider } from '@mui/material';
+import { Slider, Pagination } from '@mui/material';
 
 type SortOrder = 'none' | 'newest' | 'oldest' | 'longest' | 'shortest';
 
@@ -24,6 +24,8 @@ export default function Home() {
   const [selectedAreas, setSelectedAreas] = useState<string[]>([]);
   const [sortOrder, setSortOrder] = useState<SortOrder>('newest');
   const [draggedTag, setDraggedTag] = useState<string | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [casesPerPage] = useState(12); // Show 12 cases per page
   
   // Ensure we have the correct data structure
   const data = useMemo(() => {
@@ -118,7 +120,7 @@ export default function Home() {
   }, [data.cases, selectedAreas]);
 
   // Filter and sort court cases
-  const processedCases = useMemo(() => 
+  const filteredCases = useMemo(() => 
     data.cases
       .filter((courtCase) => {
         const visibleTags = getVisibleTags(courtCase);
@@ -261,6 +263,17 @@ export default function Home() {
     setSelectedAreas([]);
     setSortOrder('newest');
     setYearRange([minYear, maxYear]);
+  };
+
+  // Get current page cases
+  const indexOfLastCase = currentPage * casesPerPage;
+  const indexOfFirstCase = indexOfLastCase - casesPerPage;
+  const currentCases = filteredCases.slice(indexOfFirstCase, indexOfLastCase);
+  const totalPages = Math.ceil(filteredCases.length / casesPerPage);
+
+  // Handle page change
+  const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => {
+    setCurrentPage(value);
   };
 
   return (
@@ -486,10 +499,10 @@ export default function Home() {
 
           {/* Show filtered count below all filters */}
           <div className="text-sm text-gray-600 dark:text-gray-400 text-center border-t pt-4">
-            {processedCases.length === data.cases.length ? (
+            {filteredCases.length === data.cases.length ? (
               'Showing all cases'
             ) : (
-              `Showing ${processedCases.length} of ${data.cases.length} cases`
+              `Showing ${filteredCases.length} of ${data.cases.length} cases`
             )}
           </div>
 
@@ -508,10 +521,44 @@ export default function Home() {
           )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {processedCases.map((courtCase) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          {currentCases.map((courtCase) => (
             <CourtCaseCard key={courtCase.verdict_pdf} courtCase={courtCase} />
           ))}
+        </div>
+
+        {/* Pagination controls */}
+        {totalPages > 1 && (
+          <div className="flex justify-center mt-8">
+            <Pagination
+              count={totalPages}
+              page={currentPage}
+              onChange={handlePageChange}
+              variant="outlined"
+              shape="rounded"
+              size="large"
+              sx={{
+                '& .MuiPaginationItem-root': {
+                  color: 'white',
+                  borderColor: 'rgba(255, 255, 255, 0.23)',
+                  '&:hover': {
+                    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                  },
+                  '&.Mui-selected': {
+                    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                    '&:hover': {
+                      backgroundColor: 'rgba(255, 255, 255, 0.12)',
+                    },
+                  },
+                },
+              }}
+            />
+          </div>
+        )}
+
+        {/* Show total results count */}
+        <div className="text-center text-gray-400 mt-4">
+          Showing {indexOfFirstCase + 1}-{Math.min(indexOfLastCase, filteredCases.length)} of {filteredCases.length} cases
         </div>
       </div>
     </main>
