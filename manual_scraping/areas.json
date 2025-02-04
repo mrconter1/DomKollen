@@ -1,0 +1,242 @@
+[
+  {
+    "name": "Alingsås",
+    "path": "/tr/alingsas",
+    "url": "https://fup.link/tr/alingsas"
+  },
+  {
+    "name": "Attunda",
+    "path": "/tr/attunda",
+    "url": "https://fup.link/tr/attunda"
+  },
+  {
+    "name": "Blekinge",
+    "path": "/tr/blekinge",
+    "url": "https://fup.link/tr/blekinge"
+  },
+  {
+    "name": "Borås",
+    "path": "/tr/boras",
+    "url": "https://fup.link/tr/boras"
+  },
+  {
+    "name": "Eksjö",
+    "path": "/tr/eksjo",
+    "url": "https://fup.link/tr/eksjo"
+  },
+  {
+    "name": "Eskilstuna",
+    "path": "/tr/eskilstuna",
+    "url": "https://fup.link/tr/eskilstuna"
+  },
+  {
+    "name": "Falu",
+    "path": "/tr/falu",
+    "url": "https://fup.link/tr/falu"
+  },
+  {
+    "name": "Gotlands",
+    "path": "/tr/gotlands",
+    "url": "https://fup.link/tr/gotlands"
+  },
+  {
+    "name": "Gällivare",
+    "path": "/tr/gallivare",
+    "url": "https://fup.link/tr/gallivare"
+  },
+  {
+    "name": "Gävle",
+    "path": "/tr/gavle",
+    "url": "https://fup.link/tr/gavle"
+  },
+  {
+    "name": "Göteborgs",
+    "path": "/tr/goteborgs",
+    "url": "https://fup.link/tr/goteborgs"
+  },
+  {
+    "name": "Halmstads",
+    "path": "/tr/halmstads",
+    "url": "https://fup.link/tr/halmstads"
+  },
+  {
+    "name": "Haparanda",
+    "path": "/tr/haparanda",
+    "url": "https://fup.link/tr/haparanda"
+  },
+  {
+    "name": "Helsingborgs",
+    "path": "/tr/helsingborgs",
+    "url": "https://fup.link/tr/helsingborgs"
+  },
+  {
+    "name": "Hälsinglands",
+    "path": "/tr/halsinglands",
+    "url": "https://fup.link/tr/halsinglands"
+  },
+  {
+    "name": "Hässleholms",
+    "path": "/tr/hassleholms",
+    "url": "https://fup.link/tr/hassleholms"
+  },
+  {
+    "name": "Jönköpings",
+    "path": "/tr/jonkopings",
+    "url": "https://fup.link/tr/jonkopings"
+  },
+  {
+    "name": "Kalmar",
+    "path": "/tr/kalmar",
+    "url": "https://fup.link/tr/kalmar"
+  },
+  {
+    "name": "Kristianstads",
+    "path": "/tr/kristianstads",
+    "url": "https://fup.link/tr/kristianstads"
+  },
+  {
+    "name": "Linköpings",
+    "path": "/tr/linkopings",
+    "url": "https://fup.link/tr/linkopings"
+  },
+  {
+    "name": "Luleå",
+    "path": "/tr/lulea",
+    "url": "https://fup.link/tr/lulea"
+  },
+  {
+    "name": "Lunds",
+    "path": "/tr/lunds",
+    "url": "https://fup.link/tr/lunds"
+  },
+  {
+    "name": "Lycksele",
+    "path": "/tr/lycksele",
+    "url": "https://fup.link/tr/lycksele"
+  },
+  {
+    "name": "Malmö",
+    "path": "/tr/malmo",
+    "url": "https://fup.link/tr/malmo"
+  },
+  {
+    "name": "Mora",
+    "path": "/tr/mora",
+    "url": "https://fup.link/tr/mora"
+  },
+  {
+    "name": "Nacka",
+    "path": "/tr/nacka",
+    "url": "https://fup.link/tr/nacka"
+  },
+  {
+    "name": "Norrköpings",
+    "path": "/tr/norrkopings",
+    "url": "https://fup.link/tr/norrkopings"
+  },
+  {
+    "name": "Norrtälje",
+    "path": "/tr/norrtalje",
+    "url": "https://fup.link/tr/norrtalje"
+  },
+  {
+    "name": "Nyköpings",
+    "path": "/tr/nykopings",
+    "url": "https://fup.link/tr/nykopings"
+  },
+  {
+    "name": "Skaraborgs",
+    "path": "/tr/skaraborgs",
+    "url": "https://fup.link/tr/skaraborgs"
+  },
+  {
+    "name": "Skellefteå",
+    "path": "/tr/skelleftea",
+    "url": "https://fup.link/tr/skelleftea"
+  },
+  {
+    "name": "Solna",
+    "path": "/tr/solna",
+    "url": "https://fup.link/tr/solna"
+  },
+  {
+    "name": "Stockholms",
+    "path": "/tr/stockholms",
+    "url": "https://fup.link/tr/stockholms"
+  },
+  {
+    "name": "Sundsvalls",
+    "path": "/tr/sundsvalls",
+    "url": "https://fup.link/tr/sundsvalls"
+  },
+  {
+    "name": "Södertälje",
+    "path": "/tr/sodertalje",
+    "url": "https://fup.link/tr/sodertalje"
+  },
+  {
+    "name": "Södertörns",
+    "path": "/tr/sodertorns",
+    "url": "https://fup.link/tr/sodertorns"
+  },
+  {
+    "name": "Uddevalla",
+    "path": "/tr/uddevalla",
+    "url": "https://fup.link/tr/uddevalla"
+  },
+  {
+    "name": "Umeå",
+    "path": "/tr/umea",
+    "url": "https://fup.link/tr/umea"
+  },
+  {
+    "name": "Uppsala",
+    "path": "/tr/uppsala",
+    "url": "https://fup.link/tr/uppsala"
+  },
+  {
+    "name": "Varbergs",
+    "path": "/tr/varbergs",
+    "url": "https://fup.link/tr/varbergs"
+  },
+  {
+    "name": "Vänersborgs",
+    "path": "/tr/vanersborgs",
+    "url": "https://fup.link/tr/vanersborgs"
+  },
+  {
+    "name": "Värmlands",
+    "path": "/tr/varmlands",
+    "url": "https://fup.link/tr/varmlands"
+  },
+  {
+    "name": "Västmanlands",
+    "path": "/tr/vastmanlands",
+    "url": "https://fup.link/tr/vastmanlands"
+  },
+  {
+    "name": "Växjö",
+    "path": "/tr/vaxjo",
+    "url": "https://fup.link/tr/vaxjo"
+  },
+  {
+    "name": "Ystads",
+    "path": "/tr/ystads",
+    "url": "https://fup.link/tr/ystads"
+  },
+  {
+    "name": "Ångermanlands",
+    "path": "/tr/angermanlands",
+    "url": "https://fup.link/tr/angermanlands"
+  },
+  {
+    "name": "Örebro",
+    "path": "/tr/orebro",
+    "url": "https://fup.link/tr/orebro"
+  },
+  {
+    "name": "Östersunds",
+    "path": "/tr/ostersunds",
+    "url": "https://fup.link/tr/ostersunds"
+  }
+]
