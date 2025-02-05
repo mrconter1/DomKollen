@@ -120,8 +120,19 @@ export default function Home() {
   }, [data.cases, selectedAreas]);
 
   // Filter and sort court cases
-  const filteredCases = useMemo(() => 
-    data.cases
+  const filteredCases = useMemo(() => {
+    // First deduplicate cases based on court_ids
+    const uniqueCases = data.cases.reduce((acc: CourtCase[], current) => {
+      const isDuplicate = acc.some(item => 
+        item.court_ids.some(id => current.court_ids.includes(id))
+      );
+      if (!isDuplicate) {
+        acc.push(current);
+      }
+      return acc;
+    }, []);
+
+    return uniqueCases
       .filter((courtCase) => {
         const visibleTags = getVisibleTags(courtCase);
         
@@ -158,7 +169,7 @@ export default function Home() {
         const comparison = a.date.localeCompare(b.date);
         return sortOrder === 'newest' ? -comparison : comparison;
       })
-  , [data.cases, includedTags, excludedTags, selectedAreas, yearRange, sortOrder]);
+  }, [data.cases, includedTags, excludedTags, selectedAreas, yearRange, sortOrder]);
 
   // Get available tags that would match at least one case with current filters
   const availableTags = useMemo(() => {
