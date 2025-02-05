@@ -285,6 +285,10 @@ export default function Home() {
   // Handle page change
   const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => {
     setCurrentPage(value);
+    // Wait for React to update the DOM before scrolling
+    setTimeout(() => {
+      window.scrollTo(0, document.documentElement.scrollHeight);
+    }, 100);
   };
 
   return (
