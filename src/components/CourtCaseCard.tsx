@@ -88,14 +88,9 @@ export const CourtCaseCard: React.FC<Props> = ({ courtCase }) => {
               )}
             </div>
             <div className="flex flex-wrap gap-1.5">
-              {courtCase.court_ids.map((id) => (
-                <div
-                  key={id}
-                  className="flex items-center text-lg font-bold text-white bg-gray-800/50 rounded px-2 py-0.5"
-                >
-                  {id}
-                </div>
-              ))}
+              <div className="flex items-center text-lg font-bold text-white bg-gray-800/50 rounded px-2 py-0.5">
+                {courtCase.court_ids[0]}
+              </div>
             </div>
           </div>
           
